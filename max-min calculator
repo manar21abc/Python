@@ -1,0 +1,30 @@
+largest = None
+smallest = None
+
+a = []
+
+while True:
+    num = input("Enter a number: ")
+    try:
+        num_int = int(num)
+        a.append(num_int)
+        if largest is None:
+            largest = num_int
+        elif num_int > largest:
+            largest = num_int
+        elif smallest is None:
+            smallest = num_int
+        elif num_int < smallest:
+            smallest = num_int
+        continue
+    except:
+        if num == "done":
+            break
+        else:
+            print("Invalid input")
+            continue
+
+if num == "done":
+    print("Maximum is", largest)
+    print("Minimum is", smallest)
+    
